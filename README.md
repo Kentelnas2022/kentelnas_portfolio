@@ -1,4 +1,4 @@
-# Considered — Astro + React portfolio
+# Kent Zorel Elnas — Astro + React portfolio
 
 A responsive Astro site with React islands for project filters, accessible dialogs, a saved light/dark preference, and an email draft composer. The ivory and olive palette, original CSS artwork, and restrained animation are preserved.
 
@@ -8,11 +8,12 @@ Run `npm install`, then `npm run dev` and visit http://127.0.0.1:4321. Run `npm 
 
 ## Make it yours
 
-- Replace the sample name, biography, availability, and footer in `src/pages/index.astro`.
+- Update Kent’s biography, education, skills, and footer in `src/pages/index.astro`.
 - Edit project descriptions in `src/data/projects.js`, cards in `src/components/ProjectGallery.jsx`, and original artwork in `src/components/ProjectArtwork.jsx`.
-- In `src/components/Contact.jsx`, replace the recipient input with a hidden input containing your real email address to remove that setup field from the public experience.
+- The recipient is configured in `src/components/Contact.jsx` as `kentzorelelnas.202200472@gmail.com`.
 - The form opens the visitor's email application. It does not send or store messages on a server.
-- Change colors and typography in `src/styles/global.css`. Fonts load from Google Fonts, with local fallbacks.
+- Change base styling in `src/styles/global.css` and personal editorial typography in `src/styles/personal.css`. Fonts load from Google Fonts, with local fallbacks.
+- The four project studies remain clearly labeled concepts; replace them with verified personal projects when available.
 
 ## Publish
 

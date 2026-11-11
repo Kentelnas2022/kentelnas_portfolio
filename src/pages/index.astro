@@ -1,20 +1,93 @@
 ---
 import '../styles/global.css';
+import '../styles/personal.css';
 import ProjectGallery from '../components/ProjectGallery';
 import Contact from '../components/Contact';
 import ThemeToggle from '../components/ThemeToggle';
+const skills = [
+  { label: '01 / DEVELOPMENT', title: 'From interface to implementation.', items: ['Laravel', 'Next.js', 'React', 'React Native', 'Astro + React'] },
+  { label: '02 / DATABASES', title: 'A foundation for the experience.', items: ['MySQL', 'Supabase'] },
+  { label: '03 / DESIGN & WORKFLOW', title: 'Ideas made clear.', items: ['Figma', 'Prototyping', 'Visual Studio Code', 'Microsoft Word', 'Microsoft Excel'] },
+];
 ---
 <!doctype html>
-<html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#eeeee7"><meta name="description" content="An independent designer's collection of thoughtful digital experiences and visual identities."><title>Alex Morgan — Independent designer</title></head>
-<body><a class="skip" href="#work">Skip to work</a><header><a class="wordmark" href="#" aria-label="Alex Morgan home">am<span>®</span></a><nav aria-label="Main navigation"><a href="#work">Work <sup>04</sup></a><a href="#about">About</a><a href="#contact">Let’s talk <span>↗</span></a></nav><ThemeToggle client:load /></header>
-<main><section class="hero"><div class="eyebrow"><span class="status-dot"></span> INDEPENDENT DESIGNER & CREATIVE PARTNER</div><h1>Good design.<br><span class="second-line">A little <em>feeling.</em><svg class="asterisk" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66"/></svg></span></h1><div class="hero-bottom"><p>I turn complex ideas into clear, considered<br class="desktop"> digital experiences. Made with purpose.<br class="desktop"> And a little personality.</p><a class="round-link" href="#work"><span>EXPLORE SELECTED WORK</span><b>↘</b></a></div><div class="hero-foot"><span>BASED ANYWHERE. WORKING EVERYWHERE.</span><span>SCROLL TO DISCOVER ↓</span></div></section>
-<ProjectGallery client:load />
-<section id="about" class="about section"><div><span class="eyebrow">02 / THE PERSON BEHIND THE PIXELS</span><div class="about-mark" aria-hidden="true">a<span>m.</span><small>ALWAYS CURIOUS.</small></div></div><div class="about-copy"><h2>A clear head.<br>An open mind.<br><em>A considered approach.</em></h2><p>I’m Alex, an independent designer interested in the space where strategy meets feeling. I believe the best work is simple enough to understand, and distinctive enough to remember.</p><p>From a first sketch to the final interaction, I bring care, curiosity, and a collaborative spirit to every detail.</p><div class="capabilities"><span>Digital design</span><span>Visual identity</span><span>Creative direction</span><span>Web development</span></div><small class="sample-note">Sample profile — replace with your own story.</small></div></section>
-<section class="process section"><span class="eyebrow">03 / HOW I WORK</span><div class="process-list"><details open><summary><span>01</span>Start with a conversation.<b>+</b></summary><p>Good work starts with good questions. We explore your ambition, your audience, and what a meaningful outcome looks like.</p></details><details><summary><span>02</span>Find the essential.<b>+</b></summary><p>Ideas become a clear creative direction. Through sketches, visual explorations, and prototypes, we find what makes your story distinct.</p></details><details><summary><span>03</span>Make every detail count.<b>+</b></summary><p>We refine the visuals, build the experience, and test the small things—from the way it moves to the way it feels on a phone.</p></details></div></section>
-<Contact client:load /></main><footer><a class="wordmark" href="#">am<span>®</span></a><span>© <span>{new Date().getFullYear()}</span> ALEX MORGAN · DEMO PORTFOLIO</span><a href="#">BACK TO TOP ↑</a></footer>
-<script>
-if ('IntersectionObserver' in window) {
- const observer = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); } }), { threshold: 0.08 });
- document.querySelectorAll('.about-copy,.process-list').forEach(element => { element.classList.add('reveal'); observer.observe(element); });
-}
-</script></body></html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#eeeee7" />
+    <meta name="description" content="Kent Zorel Elnas — Frontend Developer & UI/UX Designer. A 2026 Information Technology graduate bringing thoughtful interfaces to life with React, Next.js, Astro, and more." />
+    <title>Kent Zorel Elnas — Frontend Developer & UI/UX Designer</title>
+  </head>
+  <body>
+    <a class="skip" href="#work">Skip to work</a>
+    <header>
+      <a class="wordmark" href="#" aria-label="Kent Zorel Elnas home">ke<span>®</span></a>
+      <nav aria-label="Main navigation">
+        <a href="#work">Work <sup>04</sup></a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Let’s talk ↗</a>
+      </nav>
+      <ThemeToggle client:load />
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow"><span class="status-dot"></span> KENT ZOREL ELNAS / FRONTEND DEVELOPER & UI/UX DESIGNER</div>
+        <h1>Designed with care.<br /><span class="second-line">Built with <em>purpose.</em><svg class="asterisk" viewBox="0 0 100 100" aria-hidden="true"><path d="M50 3v94M3 50h94M17 17l66 66M17 83l66-66" /></svg></span></h1>
+        <div class="hero-bottom">
+          <p>I’m Kent, a frontend developer and UI/UX designer. I bring design and code together to create clear, thoughtful experiences for the web and mobile.</p>
+          <a class="round-link" href="#work"><span>EXPLORE SELECTED WORK</span><b>↘</b></a>
+        </div>
+        <div class="hero-foot"><span>IT GRADUATE, CLASS OF 2026</span><span>OPEN TO FRONTEND & UI/UX OPPORTUNITIES ↗</span></div>
+      </section>
+
+      <ProjectGallery client:load />
+
+      <section id="about" class="about section">
+        <div>
+          <span class="eyebrow">02 / A LITTLE ABOUT ME</span>
+          <div class="about-mark" aria-hidden="true">k<span>e.</span><small>DESIGN MIND. DEVELOPER’S CURIOSITY.</small></div>
+          <div class="education"><span class="eyebrow">EDUCATION / 2026</span><p>Bachelor’s degree<br />in Information Technology</p></div>
+        </div>
+        <div class="about-copy">
+          <h2>A designer’s eye.<br />A developer’s mindset.<br /><em>One thoughtful experience.</em></h2>
+          <p>I’m Kent Zorel Elnas, a 2026 Information Technology graduate with a focus on frontend development and UI/UX design. I enjoy shaping an idea from its first prototype into an interface people can use with confidence.</p>
+          <p>I work across design and implementation, connecting visual decisions with practical functionality. I’m looking to join a team where I can contribute thoughtful interfaces, learn through collaboration, and grow alongside the products we build.</p>
+          <div class="capabilities"><span>Frontend development</span><span>UI/UX design</span><span>Interactive prototyping</span><span>Web & mobile interfaces</span></div>
+          <a class="inline-link" href="https://github.com/kentelnas2022" target="_blank" rel="noopener noreferrer">Explore my GitHub ↗</a>
+        </div>
+      </section>
+
+      <section class="statement section" aria-label="My design philosophy">
+        <span class="eyebrow">THE STANDARD I WORK TOWARD</span>
+        <blockquote>“Every interface is a chance to make someone’s day <em>a little easier.</em>”</blockquote>
+        <p>My approach to design & development <span>— Kent Zorel Elnas</span></p>
+      </section>
+
+      <section id="skills" class="skills section">
+        <div class="section-heading"><div><span class="eyebrow">03 / MY TOOLKIT</span><h2>Design fluency.<br /><em>Practical tools.</em></h2></div><p>The technologies and tools I use<br />to move from idea to interface.</p></div>
+        <div class="skill-list">{skills.map(skill => <article class="skill-row"><span class="eyebrow">{skill.label}</span><h3>{skill.title}</h3><ul>{skill.items.map(item => <li>{item}</li>)}</ul></article>)}</div>
+      </section>
+
+      <section class="process section">
+        <div><span class="eyebrow">04 / WHAT I BRING TO A TEAM</span><h2>Care in the details.<br /><em>Clarity in the work.</em></h2></div>
+        <div class="process-list">
+          <details open><summary><span>01</span>Understand before building.<b>+</b></summary><p>“The right solution starts with a better question.” I aim to understand the user’s needs and the team’s goals before deciding how an interface should look or behave.</p></details>
+          <details><summary><span>02</span>Connect design and code.<b>+</b></summary><p>“A good idea deserves a thoughtful implementation.” I bring a design perspective to development, paying attention to layout, interaction, and consistency as a concept becomes a working interface.</p></details>
+          <details><summary><span>03</span>Stay curious. Keep improving.<b>+</b></summary><p>“Progress comes from listening, learning, and refining.” As a new graduate, I welcome feedback and the opportunity to develop my skills while contributing to a shared goal.</p></details>
+        </div>
+      </section>
+      <Contact client:load />
+    </main>
+    <footer><a class="wordmark" href="#" aria-label="Kent Zorel Elnas home">ke<span>®</span></a><span>© {new Date().getFullYear()} KENT ZOREL ELNAS</span><a href="https://github.com/kentelnas2022" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="#">BACK TO TOP ↑</a></footer>
+    <script>
+      if ('IntersectionObserver' in window) {
+        const observer = new IntersectionObserver(entries => entries.forEach(entry => {
+          if (entry.isIntersecting) { entry.target.classList.add('visible'); observer.unobserve(entry.target); }
+        }), { threshold: 0.08 });
+        document.querySelectorAll('.about-copy,.process-list,.skill-row,.statement blockquote').forEach(element => { element.classList.add('reveal'); observer.observe(element); });
+      }
+    </script>
+  </body>
+</html>
